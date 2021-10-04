@@ -1,9 +1,15 @@
 *** Settings ***
 Library    SeleniumLibrary
 
+
+*** Variables ***
+${URL}    https://www.etteplan.com/fi
+${BROWSER}    Chrome
+${SEARCH}    robotiikka
+
 *** Keywords ***
 Open Browser to Login Page
-    Open Browser   https://www.etteplan.com/fi   Chrome
+    Open Browser      ${BROWSER}
     Maximize Browser Window
 
 Go to jobs
@@ -16,7 +22,7 @@ Go to jobs
 
 Search for something
     Go to main Page
-    Input Text             id:edit-keys    robotiikka
+    Input Text             id:edit-keys    ${SEARCH}
     Click Element          id:edit-submit
     Page Should Contain    automaatio ja robotiikka
 
