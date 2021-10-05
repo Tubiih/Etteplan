@@ -6,8 +6,9 @@ Suite Setup       Open Browser To Login Page
 Suite Teardown    Close Browser
 
 *** Test Cases ***
-Search for a job
-    Go to jobs
+Test Main menu main sections
+    Go to main Page
+    Click through sections
 
 Search something from website
     Search for something
@@ -16,5 +17,6 @@ Change Language
     Go to main Page
     Change language to english
 
-Go to contacts
-    Open contacts window
+Test Etteplan link
+    Navigate to about us 
+    Click Etteplan logo

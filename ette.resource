@@ -1,7 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
 
-
 *** Variables ***
 ${URL}    https://www.etteplan.com/fi
 ${BROWSER}    Chrome
@@ -9,8 +8,17 @@ ${SEARCH}    robotiikka
 
 *** Keywords ***
 Open Browser to Login Page
-    Open Browser      ${BROWSER}
+    Open Browser      ${URL}    ${BROWSER}
     Maximize Browser Window
+
+Click through sections
+    Click Element    //*[@id="block-primary-navigation-new"]/ul/li[1]/a
+    Click Element    //*[@id="block-primary-navigation-new"]/ul/li[2]/a
+    Click Element    //*[@id="block-primary-navigation-new"]/ul/li[3]/a
+    Click Element    //*[@id="block-primary-navigation-new"]/ul/li[4]/a
+    Click Element    //*[@id="block-primary-navigation-new"]/ul/li[5]/a 
+    Click Element    //*[@id="block-primary-navigation-new"]/ul/li[6]/a
+    Click Element    //*[@id="block-primary-navigation-new"]/ul/li[7]/a   
 
 Go to jobs
     Mouse Over             //*[@id="block-primary-navigation-new"]/ul/li[4]/a
@@ -28,6 +36,7 @@ Search for something
 
 Go to main Page
     Go To                  https://www.etteplan.com/fi
+    
 Change language to english
     Click Element          //*[@id="site-header"]/div[1]/div/nav/div[2]/div/span[2]
     Click Element          //*[@id="site-header"]/div[1]/div/nav/div[2]/ul/li[1]/a
@@ -36,3 +45,9 @@ Change language to english
 Open contacts window
     Click Element          //*[@id="block-primary-navigation-new"]/ul/li[7]/a
     Page Should Contain    Tekniikantie 4 D
+
+Navigate to about us
+    Click Element          //*[@id="block-primary-navigation-new"]/ul/li[6]/a
+
+Click Etteplan logo
+    Click Element          //*[@id="block-etteplan-branding"]/a/img
