@@ -27,6 +27,9 @@ Click through sections
     Click Element        //*[@id="block-primary-navigation-new"]/ul/li[7]/a   
     Title Should Be      Ota meihin yhteyttä | Etteplan
 
+    ${TITLE} =     Get Title
+    Log    ${TITLE}
+
 Go to jobs
     Mouse Over             //*[@id="block-primary-navigation-new"]/ul/li[4]/a
     Click Element          //*[@id="block-primary-navigation-new"]/ul/li[4]/div/ul/li[1]/a
