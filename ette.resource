@@ -4,7 +4,7 @@ Library    SeleniumLibrary
 *** Variables ***
 ${URL}    https://www.etteplan.com/fi
 ${BROWSER}    Chrome
-${SEARCH}    robotiikka
+${SEARCH}     robotiikka
 
 *** Keywords ***
 Open Browser to Login Page
@@ -12,13 +12,20 @@ Open Browser to Login Page
     Maximize Browser Window
 
 Click through sections
-    Click Element    //*[@id="block-primary-navigation-new"]/ul/li[1]/a
-    Click Element    //*[@id="block-primary-navigation-new"]/ul/li[2]/a
-    Click Element    //*[@id="block-primary-navigation-new"]/ul/li[3]/a
-    Click Element    //*[@id="block-primary-navigation-new"]/ul/li[4]/a
-    Click Element    //*[@id="block-primary-navigation-new"]/ul/li[5]/a 
-    Click Element    //*[@id="block-primary-navigation-new"]/ul/li[6]/a
-    Click Element    //*[@id="block-primary-navigation-new"]/ul/li[7]/a   
+    Click Element        //*[@id="block-primary-navigation-new"]/ul/li[1]/a
+    Title Should Be      Palvelumme | Etteplan
+    Click Element        //*[@id="block-primary-navigation-new"]/ul/li[2]/a
+    Title Should Be      Ratkaisut yritysten tarpeisiin | Etteplan
+    Click Element        //*[@id="block-primary-navigation-new"]/ul/li[3]/a
+    Title Should Be      Referenssit | Etteplan
+    Click Element        //*[@id="block-primary-navigation-new"]/ul/li[4]/a
+    Title Should Be      Careers with a difference | Etteplan
+    Click Element        //*[@id="block-primary-navigation-new"]/ul/li[5]/a 
+    Title Should Be      Sijoittajat | Etteplan
+    Click Element        //*[@id="block-primary-navigation-new"]/ul/li[6]/a
+    Title Should Be      Etteplan lyhyesti | Etteplan
+    Click Element        //*[@id="block-primary-navigation-new"]/ul/li[7]/a   
+    Title Should Be      Ota meihin yhteyttä | Etteplan
 
 Go to jobs
     Mouse Over             //*[@id="block-primary-navigation-new"]/ul/li[4]/a
@@ -35,7 +42,7 @@ Search for something
     Page Should Contain    automaatio ja robotiikka
 
 Go to main Page
-    Go To                  https://www.etteplan.com/fi
+    Go To                  ${URL}
     
 Change language to english
     Click Element          //*[@id="site-header"]/div[1]/div/nav/div[2]/div/span[2]
