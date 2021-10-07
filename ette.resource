@@ -23,7 +23,7 @@ Click through sections
     Click Element        //*[@id="block-primary-navigation-new"]/ul/li[5]/a 
     Title Should Be      Sijoittajat | Etteplan
     Click Element        //*[@id="block-primary-navigation-new"]/ul/li[6]/a
-    Title Should Be      Etteplan lyhyesti | Etteplan
+    Title Should Be      Tietoa meistä | Etteplan
     Click Element        //*[@id="block-primary-navigation-new"]/ul/li[7]/a   
     Title Should Be      Ota meihin yhteyttä | Etteplan
 

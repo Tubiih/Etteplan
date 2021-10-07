@@ -9,7 +9,7 @@ Test Main menu main sections
     [Tags]    XRAYT-12
     Go to main Page
     Click through sections
-
+    
 Search something from website
     [Tags]    XRAYT-7
     Search for something
@@ -23,3 +23,4 @@ Test Etteplan link
     [Tags]    XRAYT-6
     Navigate to about us 
     Click Etteplan logo
+    
